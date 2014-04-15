@@ -10,27 +10,16 @@ const (
 	UPPER_LETTER_LEN = len(UPPER_LETTER)
 	LOWER_LETTER     = "abcdefghijklmnopqrstuvwxyz"
 	LOWER_LETTER_LEN = len(LOWER_LETTER)
-	SYMBOL           = "#$%^*"
-	SYMBOL_LEN       = len(SYMBOL)
 	NUMBER           = "0123456789"
 	LETTER           = UPPER_LETTER + LOWER_LETTER
 	LETTER_LEN       = len(LETTER)
-	CHAR             = NUMBER + UPPER_LETTER + LOWER_LETTER + SYMBOL
+	CHAR             = NUMBER + UPPER_LETTER + LOWER_LETTER
 	CHAR_LEN         = len(CHAR)
 )
 
 func Int(min, max int) int {
 	source := rand.NewSource(time.Now().UnixNano())
 	return min + rand.New(source).Intn(max-min)
-}
-
-func Symbol() string {
-	rint := Int(0, SYMBOL_LEN)
-	return SYMBOL[rint : rint+1]
-}
-
-func Symbols(length int) string {
-	return strs(Symbol, length)
 }
 
 func Char() string {

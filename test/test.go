@@ -11,6 +11,4 @@ func main() {
 	fmt.Println("letters: ", random.Letters(10))
 	fmt.Println("String: ", random.String(10))
 	fmt.Println("int: ", random.Int(0, 100))
-	fmt.Println("symbol: ", random.Symbol())
-	fmt.Println("symbols: ", random.Symbols(3))
 }
